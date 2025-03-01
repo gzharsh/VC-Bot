@@ -1,9 +1,7 @@
-pyrogram
-tgcrypto
-pytgcalls>=0.8.3
-yt-dlp
-speechrecognition
-gtts
-pydub
-aiohttp
-pillow
+pyrogram==2.0.106
+tgcrypto==1.2.5
+pytgcalls==0.8.3
+yt-dlp==2024.02.17
+speechrecognition==3.10.0
+gtts==2.4.0
+pydub==0.25.1
