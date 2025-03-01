@@ -1,17 +1,17 @@
-# Python 3.10 use kar raha hu, agar tu koi aur version chahata hai toh bata
-FROM python:3.10
+# Step 1: Python ka latest stable version use kar
+FROM python:3.10  
 
-# Working directory set kar raha hu
-WORKDIR /app
+# Step 2: Working directory set kar
+WORKDIR /app  
 
-# Required dependencies copy kar raha hu
-COPY requirements.txt requirements.txt
+# Step 3: Pehle requirements.txt copy kar
+COPY requirements.txt .
 
-# Python dependencies install kar raha hu
-RUN pip install --no-cache-dir -r requirements.txt
+# Step 4: Dependencies install kar
+RUN pip install --no-cache-dir -r requirements.txt  
 
-# Baki saari files copy kar raha hu
-COPY . .
+# Step 5: Baaki saari files copy kar
+COPY . .  
 
-# Command to run the bot
-CMD ["python", "main.py"]
+# Step 6: Bot ko run karne ka command
+CMD ["python", "bot.py"]  
