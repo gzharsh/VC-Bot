@@ -1,15 +1,12 @@
-# Python 3.10 ka lightweight version use kar
-FROM python:3.10-slim  
+FROM python:3.11
 
-# Working directory set kar
-WORKDIR /app  
+WORKDIR /app
 
-# Pehle dependencies install kar
+RUN apt-get update && apt-get install -y ffmpeg libffi-dev
+
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt  
+RUN pip install -r requirements.txt
 
-# Baaki saari files copy kar
-COPY . .  
+COPY . .
 
-# Bot ko run karne ka command
-CMD ["python", "bot.py"]  
+CMD ["python", "bot.py"]
